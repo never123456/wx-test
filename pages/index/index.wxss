@@ -1,0 +1,8 @@
+.hint-wrap {
+  width: 100%;
+  text-align: center;
+}
+.hint-txt {
+  font-size: 30rpx;
+  color: #006064;
+}
