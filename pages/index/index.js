@@ -1,5 +1,5 @@
 const loadUserInfo = require('../tepls/loadUserInfo.js').loadUserInfo;
-const listData = require('../datas/datas.js').listData;
+const listData = require('../../datas/datas.js').listData;
 Page({
   /**
    * 页面的初始数据

@@ -1,15 +1,16 @@
+<import src="/pages/tepls/list_item_teml/list_item_teml.wxml"/>
 <view class='container-wrap'>
   <swiper class="swiper-wrap" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{imgUrls}}">
       <swiper-item>
-        <image src="{{item}}" class="slide-image"/>
+        <image src="{{item}}" class="slide-image" />
       </swiper-item>
     </block>
   </swiper>
   <view class='avatar-wrap'>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
   </view>
-  <view class='list-wrap'>
-    
-  </view>
+  <block wx:for="{{listData}}">
+    <template is="listItem" data="{{...item}}"/>
+  </block>
 </view>

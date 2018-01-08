@@ -1,0 +1,17 @@
+<template name="listItem">
+  <view class='list-wrap'>
+    <view class='icon-wrap'>
+      <image src="{{icon}}" class='icon'></image>
+      <text class='time'>{{time}}</text>
+    </view>
+    <view class='img-wrap'>
+      <image src='{{img}}' class='bcg-img'></image>
+      <text class='title'>{{title}}</text>
+    </view>
+    <text class='summary'>{{summary}}</text>
+    <view class='attach-watch-wrap'>
+      <text class='attach iconfont icon-guanzhu1'>{{attach}}</text>
+      <text class='iconfont icon-guankan-'>{{watch}}</text>
+    </view>
+  </view>
+</template>

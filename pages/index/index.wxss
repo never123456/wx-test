@@ -1,24 +1,33 @@
+@import '/pages/tepls/list_item_teml/list_item_teml.wxss';
+
 .slide-image {
   width: 100%;
 }
+
 .container-wrap {
-  position:relative;
+  position: relative;
   height: 478rpx;
 }
+
 .avatar-wrap {
   position: absolute;
   left: 0;
   bottom: 0;
 }
+
 .swiper-wrap {
   height: 478rpx;
 }
+
 .userinfo-avatar {
   width: 110rpx;
   height: 110rpx;
   margin: 20rpx;
   border-radius: 50%;
 }
+
 .userinfo-nickname {
   color: #aaa;
 }
+
+
