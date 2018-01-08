@@ -1,8 +1,24 @@
-.hint-wrap {
+.slide-image {
   width: 100%;
-  text-align: center;
 }
-.hint-txt {
-  font-size: 30rpx;
-  color: #006064;
+.container-wrap {
+  position:relative;
+  height: 478rpx;
+}
+.avatar-wrap {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.swiper-wrap {
+  height: 478rpx;
+}
+.userinfo-avatar {
+  width: 110rpx;
+  height: 110rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #aaa;
 }

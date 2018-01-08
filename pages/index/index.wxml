@@ -1,3 +1,15 @@
-<view class='hint-wrap'>
-  <text class='hint-txt'>是不是被我吓到了~~23333~~~</text>
+<view class='container-wrap'>
+  <swiper class="swiper-wrap" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='avatar-wrap'>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+  </view>
+  <view class='list-wrap'>
+    
+  </view>
 </view>

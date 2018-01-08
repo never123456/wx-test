@@ -1,5 +1,6 @@
 //获取应用实例
-const app = getApp()
+const app = getApp();
+const loadUserInfo = require('../tepls/loadUserInfo.js').loadUserInfo;
 
 Page({
   data: {
@@ -7,17 +8,15 @@ Page({
     userInfo: {}
   },
   onGoToIndex:function(){
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/index/index'
     })
   },
   onLoad: function () {
-    wx.getUserInfo({
-      success: (e) => {
-        this.setData({
-          userInfo:e.userInfo
-        });
-      }
+    loadUserInfo((e) => {
+      this.setData({
+        userInfo: e.userInfo
+      });
     })
   }
 })
