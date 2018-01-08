@@ -7,6 +7,6 @@
     </block>
   </view>
   <view class="usermotto" bind:tap="onGoToIndex">
-    <text class="user-motto">{{motto}}</text>
+    <text class="user-motto iconfont icon-guanzhu1">{{motto}}</text>
   </view>
 </view>

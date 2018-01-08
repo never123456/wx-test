@@ -1,4 +1,5 @@
 const loadUserInfo = require('../tepls/loadUserInfo.js').loadUserInfo;
+const listData = require('../datas/datas.js').listData;
 Page({
   /**
    * 页面的初始数据
@@ -13,7 +14,8 @@ Page({
     autoplay: true,
     interval: 3000,
     duration: 1000,
-    userInfo:{}
+    userInfo:{},
+    listData:[]
   },
 
   /**
@@ -24,7 +26,10 @@ Page({
       this.setData({
         userInfo: e.userInfo
       });
-    })
+    });
+    this.setData({
+      listData
+    });
   },
 
   /**
