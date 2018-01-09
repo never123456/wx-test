@@ -8,7 +8,10 @@ Page({
     userInfo: {}
   },
   onGoToIndex:function(){
-    wx.redirectTo({
+    // wx.redirectTo({
+    //   url: '/pages/index/index'
+    // })
+    wx.navigateTo({
       url: '/pages/index/index'
     })
   },
