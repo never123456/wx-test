@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    playing: false,
+    isSc:false
   },
 
   /**
@@ -15,53 +16,35 @@ Page({
     this.setData(listData[options.id]);
     console.log(this.data.info)
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
+  traggonPlay(e) {
+    this.setData({
+      playing: !this.data.playing
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
+  mockShare(){
+    let items = [
+      '分享到朋友圈',
+      '分享到qq',
+      '分享到微博'
+    ];
+    wx.showActionSheet({
+      itemList: items,
+      success(res) {
+        wx.showModal({
+          title: '提示',
+          content: '抱歉无法真正' + items[res.tapIndex]
+        })
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+  mockSc(){
+    this.setData({
+      isSc: !this.data.isSc
+    })
+    wx.showToast({
+      title: this.data.isSc?'收藏成功':'取消收藏成功',
+      icon: 'success',
+      duration: 1000
+    })
   }
 })

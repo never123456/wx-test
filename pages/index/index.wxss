@@ -1,4 +1,4 @@
-@import '/pages/tepls/list_item_teml/list_item_teml.wxss';
+@import '/tepls/list_item_teml/list_item_teml.wxss';
 
 .slide-image {
   width: 100%;

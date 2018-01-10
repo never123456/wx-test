@@ -6,9 +6,13 @@
   </view>
   <image src='{{img}}' class='img'></image>
   <view class='ope-wrap'>
-    <view class='radio'></view>
-    <image src="{{isSc?'/imgs/sc.png':'/imgs/sc-s.png'}}" class='sc'></image>
-    <image src='/imgs/share.png' class='share'></image>
+  <view class='line'></view>
+    <view class='radio' capture-bind:tap="traggonPlay">
+      <image src='{{img}}' class='radio-img'></image>
+      <image src="{{playing?'/imgs/play.png':'/imgs/parse-s.png'}}" class='radio-play'></image>
+    </view>
+    <image src="{{isSc?'/imgs/sc.png':'/imgs/sc-s.png'}}" class='sc' catch:tap="mockSc"></image>
+    <image src='/imgs/share.png' class='share' catch:tap="mockShare"></image>
   </view>
   <view class='context-wrap'>
     {{detail}}

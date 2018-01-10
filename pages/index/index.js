@@ -1,4 +1,4 @@
-const loadUserInfo = require('../tepls/loadUserInfo.js').loadUserInfo;
+const loadUserInfo = require('../../tepls/loadUserInfo.js').loadUserInfo;
 const listData = require('../../datas/datas.js').listData;
 Page({
   /**
