@@ -1,2 +1,16 @@
-<!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<view>
+  <text class='title'>{{title}}</text>
+  <view class='author-time'>
+    <text class='author'>{{author}}</text>
+    <text class='time'>{{time}}</text>
+  </view>
+  <image src='{{img}}' class='img'></image>
+  <view class='ope-wrap'>
+    <view class='radio'></view>
+    <image src="{{isSc?'/imgs/sc.png':'/imgs/sc-s.png'}}" class='sc'></image>
+    <image src='/imgs/share.png' class='share'></image>
+  </view>
+  <view class='context-wrap'>
+    {{detail}}
+  </view>
+</view>

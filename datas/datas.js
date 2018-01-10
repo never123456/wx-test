@@ -29,6 +29,3 @@ const listData = [
 module.exports = {
     listData
 }
-module.exports = {
-  listData
-};
